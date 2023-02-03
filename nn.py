@@ -1,7 +1,7 @@
 from main import *
 import torch
 import random
-torch.load('bumba.txt')
+nn = torch.load('bumba.txt')
 while True:
   word = input()
   ind = nn(word_onehot(word)).tolist().index(max(nn(word_onehot(word)).tolist()))
